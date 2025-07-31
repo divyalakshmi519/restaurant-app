@@ -1,0 +1,35 @@
+.header-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+.heading {
+  font-size: 28px;
+  font-family: 'Roboto';
+  color: #000000;
+}
+.cart-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-count {
+  background-color: red;
+  color: #ffffff;
+  font-size: 18px;
+  height: 50%;
+  padding: 3px;
+  border-radius: 50%;
+}
+.cart-heading {
+  display: none;
+}
+@media (min-width: 568px) {
+  .cart-heading {
+    display: block;
+    font-size: 22px;
+    font-family: sans-serif;
+  }
+}
