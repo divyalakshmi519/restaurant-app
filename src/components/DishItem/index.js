@@ -1,4 +1,4 @@
-import "./index.css";
+import './index.css'
 
 const DishItem = ({
   dishDetails,
@@ -17,15 +17,15 @@ const DishItem = ({
     dishCalories,
     addonCat,
     dishAvailability,
-  } = dishDetails;
+  } = dishDetails
 
-  const onIncreaseQuantity = () => addItemToCart(dishDetails);
-  const onDecreaseQuantity = () => removeItemFromCart(dishDetails);
+  const onIncreaseQuantity = () => addItemToCart(dishDetails)
+  const onDecreaseQuantity = () => removeItemFromCart(dishDetails)
 
   const getQuantity = () => {
-    const cartItem = cartItems.find((item) => item.dishId === dishId);
-    return cartItem ? cartItem.quantity : 0;
-  };
+    const cartItem = cartItems.find(item => item.dishId === dishId)
+    return cartItem ? cartItem.quantity : 0
+  }
 
   const renderControllerButton = () => (
     <div className="controller-container d-flex align-items-center bg-success">
@@ -37,16 +37,14 @@ const DishItem = ({
         +
       </button>
     </div>
-  );
+  )
 
   return (
     <li className="mb-3 p-3 dish-item-container d-flex">
       <div
-        className={`veg-border ${dishType === 1 ? "non-veg-border" : ""} me-3`}
+        className={`veg-border ${dishType === 1 ? 'non-veg-border' : ''} me-3`}
       >
-        <div
-          className={`veg-round ${dishType === 1 ? "non-veg-round" : ""}`}
-        />
+        <div className={`veg-round ${dishType === 1 ? 'non-veg-round' : ''}`} />
       </div>
 
       <div className="dish-details-container">
@@ -54,7 +52,6 @@ const DishItem = ({
         <p className="dish-currency-price">
           {dishCurrency} {dishPrice}
         </p>
-
         <p className="dish-description">{dishDescription}</p>
 
         {dishAvailability && renderControllerButton()}
@@ -64,9 +61,7 @@ const DishItem = ({
         )}
 
         {addonCat.length !== 0 && (
-          <p className="addon-availability-text">
-            Customizations available
-          </p>
+          <p className="addon-availability-text">Customizations available</p>
         )}
       </div>
 
@@ -76,7 +71,7 @@ const DishItem = ({
 
       <img className="dish-image" alt={dishName} src={dishImage} />
     </li>
-  );
-};
+  )
+}
 
-export default DishItem;
+export default DishItem
