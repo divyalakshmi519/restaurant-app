@@ -68,14 +68,14 @@
   border: none;
   outline: none;
   cursor: pointer;
-  color: #fff;
+  color: #1114dd;
   font-weight: 600;
   font-size: 18px;
 }
 
 .quantity {
   margin: 0 10px;
-  color: #fff;
+  color: #e21111;
   font-size: 18px;
 }
 
